@@ -2,7 +2,7 @@
 
 ![HtmlCssSass](https://cdn.eduonix.com/assets/images/header_img/2021081711405813189.png)
 
-¡Bienvenido/a al repositorio que alberga mis proyectos de desarrollo web, enfocándome en HTML, CSS y Sass! Esta colección representa un hito en mi viaje de aprendizaje, proporcionando una sólida base en las tecnologías esenciales para la creación de páginas web atractivas y funcionales.
+Bienvenido/a a mi repositorio donde comparto una selección de mis proyectos de desarrollo web, centrándome principalmente en HTML, CSS y Sass. Esta colección de proyectos marca un hito significativo en mi trayectoria de aprendizaje, ya que representa mi inicio en el mundo del desarrollo web, estableciendo una base sólida en las tecnologías fundamentales para la creación de páginas web atractivas y funcionales.
 
 ## Contenido
 
