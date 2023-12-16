@@ -31,7 +31,7 @@
 4. **Página sobre Australia** - [Ver aquí](https://australiabcweb.netlify.app/)
    - Página web con distintas secciones que aborda información sobre atracciones turísticas de Australia. Intenté aplicar todo lo aprendido en los proyectos anteriores para crear una experiencia completa.
 
-### Progresión a JavaScript
+## Progresión a JavaScript
 
 - Estos proyectos sientan las bases para futuros desarrollos que incorporarán JavaScript.
 - Visita el repositorio [JavaScript-Projects](https://github.com/AkaBnja/JavaScript-Projects) si quieres ver mis proyectos realizados con HTML, CSS, Sass y JavaScript.
