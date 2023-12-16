@@ -1,0 +1,94 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(209, 209, 209);
+}
+
+.container-img { /* Se ingresa a la clase */
+    display: flex; /* Se aplica flexbox */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-img .img { /* Al estar ingresando a una clase dentro de otra clase se tiene que anotar .claseMayor .claseMenor */
+    position: relative; /* Se le aplica una posicion relativa */
+    margin-right: -15; /* Se aplica un efecto de -15px para que del lado derecho parezcan estar como encima del otro objeto */
+    display: inline-flex; /* Se aplica inline-flex para que sea flexible y vaya de izquierda a derecha */
+    flex-direction: column; /* La direccion en flex-direction es un poco confusa, pero en resumen con column se colocan de izquierda a derecha, y con row es de como desde arriba hacia abajo */
+}
+
+.container-img .img img {
+    width: 200px;
+    height: 200px;
+    transition: 0.3s ease-in-out;
+}
+
+.container-img .img .name {
+    position: absolute; /* La posicion absoluta es que el punto de referencia para hacer los cambios que se le indican mas abajo es tomando al bloque como parametro, en cambio la posicopm  relative (relativa) toma como punto de referencia su propio bloque */
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white;
+    border-radius: 5px;
+    display: none;
+    min-width: 70px;
+    width: 130px;
+    top: -30px;
+    padding: 10px 15px;
+    left: 25px;
+}
+
+.container-img .img .name .text {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 140px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.container-img .img:hover .name {
+    display: flex;
+    transform: translateY(-30px);
+}
+
+.container-img .img:hover img {
+    transform: translateY(-12px);
+}
+
+@media (max-width: 1000px){
+    .container-img{
+        flex-direction: column;
+        height: 150vh;
+    }
+}
+
+.container-img .img.one img:hover {
+    background-image: linear-gradient(to bottom right, #2d4d2f, #3d8a36, #69db46); /* Cambie el background-color por esto que es para hacer colores con degrades */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container-img .img.two img:hover {
+    background-image: linear-gradient(to bottom right, #47392b, #815145, #ad8822); /* Cambie el background-color por esto que es para hacer colores con degrades */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container-img .img.three img:hover {
+    background-image: linear-gradient(to bottom right, #1c4d70, #215981, #2eb9be); /* Cambie el background-color por esto que es para hacer colores con degrades */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container-img .img.four img:hover {
+    background-image: linear-gradient(to bottom right, #422c4d, #512b64, #8838b1); /* Cambie el background-color por esto que es para hacer colores con degrades */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container-img .img.five img:hover {
+    background-image: linear-gradient(to bottom right, #633c4f, #a34772, #9c2c84); /* Cambie el background-color por esto que es para hacer colores con degrades */
+    border-radius: 5px;
+    padding: 5px;
+}

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  background-color: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+}
+nav .btnMenu i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+nav .logo {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover {
+  color: #1b1b1b;
+  background: #fff;
+}
+nav ul li .active {
+  color: #1b1b1b;
+  background: #fff;
+}
+nav #click {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  nav #click:checked ~ ul {
+    left: 0%;
+  }
+  nav #click:checked ~ .btnMenu i:before {
+    content: "\f00d";
+  }
+  nav .btnMenu i {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background: #1b1b1b;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  nav ul li {
+    margin: 40px 0;
+  }
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+  }
+  nav ul li a:hover {
+    color: #28ddd4;
+    background: none;
+  }
+  nav ul li .active {
+    color: #28ddd4;
+    background: none;
+  }
+}/*# sourceMappingURL=style.css.map */

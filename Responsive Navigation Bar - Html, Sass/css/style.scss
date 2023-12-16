@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    height: 80px;
+    display: flex;
+    background-color: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px; // (largo de arriba, derecha, abajo y izquierda)
+    .btnMenu {
+        i {
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+        }
+    }
+    .logo {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 600;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        li {
+            margin: 0 5px;
+            a {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                text-decoration: none;
+                letter-spacing: 1px;
+                padding: 5px 8px;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                &:hover {
+                    color: #1b1b1b;
+                    background: #fff;
+                }
+            }
+            .active {
+                color: #1b1b1b;
+                background: #fff;
+            }
+        }
+    }
+    #click {
+        display: none;
+    }
+}
+
+@media (max-width: 940px) {
+    nav {
+        #click:checked ~ ul {
+            left: 0%;
+        }
+        #click:checked ~ .btnMenu i:before {
+            content: "\f00d";
+        }
+        .btnMenu {
+            i {
+                display: block;
+            }
+        }
+        ul {
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            height: 100vh;
+            width: 100%;
+            background: #1b1b1b;
+            display: block;
+            text-align: center;
+            transition: all 0.3s ease;
+            li {
+                margin: 40px 0;
+                a {
+                    font-size: 20px;
+                    display: block;
+                    &:hover {
+                        color: #28ddd4;
+                        background: none;
+                    }
+                }
+                .active {
+                    color: #28ddd4;
+                    background: none;
+                }
+            }
+        }
+    }
+}

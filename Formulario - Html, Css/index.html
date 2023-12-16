@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">English classes at your fingertips</h1>
+    <p id="description"> Fill out this form to make a personalized quote for English classes.</p>
+    <form action="" id="survey-form">
+        <label for="name" id="name-label">Name:</label>
+        <input id="name" type="text" placeholder="Name..." required>
+        <label for="email" id="email-label">Email:</label>
+        <input id="email" type="email" pattern=".+@globex\.com" placeholder="Email..." required>
+        <label for="number" id="number-label">Age:</label>
+        <input id="number" type="number" min="1" max="100" placeholder="Age...">
+        <h2>Time availability:</h2>
+        <select name="select" id="dropdown">
+            <option value="">Options</option>
+            <option value="optionOne">In the morning.</option>
+            <option value="optionTwo">In the afternoon.</option>
+            <option value="optionThree">At night.</option>
+        </select>
+        <div class="radios">
+            <h2>English level:</h2>
+            <input type="radio" id="radioOne" name="list" value="A1">
+            <label for="radioOne">A1.</label><br />
+            <input type="radio" id="radioTwo" name="list" value="A2">
+            <label for="radioTwo">A2.</label><br />
+            <input type="radio" id="radioThree" name="list" value="B1">
+            <label for="radioThree">B1.</label><br />
+            <input type="radio" id="radioFour" name="list" value="B2">
+            <label for="radioFour">B2.</label><br />
+            <input type="radio" id="radioFive" name="list" value="C1">
+            <label for="radioFive">C1.</label><br />
+            <input type="radio" id="radioSix" name="list" value="C2">
+            <label for="radioSix">C2.</label>
+        </div>
+        <div class="casillas">
+            <h2>Why do you want to learn english?</h2>
+            <input type="checkbox" id="checkboxOne" name="listTwo" value="checkboxOne">
+            <label for="checkboxOne">Job opportunities.</label><br />
+            <input type="checkbox" id="checkboxTwo" name="listTwo" value="checkboxTwo">
+            <label for="checkboxTwo">Global communication.</label><br />
+            <input type="checkbox" id="checkboxThree" name="listTwo" value="checkboxThree">
+            <label for="checkboxThree">Access to resources and knowledge.</label><br />
+            <input type="checkbox" id="checkboxFour" name="listTwo" value="checkboxFour">
+            <label for="checkboxFour">Travels and tourism.</label><br />
+            <input type="checkbox" id="checkboxFive" name="listTwo" value="checkboxFive">
+            <label for="checkboxFive">Academic studies.</label><br />
+            <input type="checkbox" id="checkboxSix" name="listTwo" value="checkboxSix">
+            <label for="checkboxSix">Expand the network of contacts.</label><br />
+            <input type="checkbox" id="checkboxSeven" name="listTwo" value="checkboxSeven">
+            <label for="checkboxSeven">Access to media and entertainment.</label><br /><br />
+        </div>
+        <label for="textarea" id="textarea-label">Tell us about you! In the following text box we invite you to tell us more about yourself, about your work, hobbies, etc. (Optional)</label><br />
+        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea><br />
+        <div class="btn">
+            <button id="submit" type="submit">SUBMIT</button>
+        </div>
+    </form>
+</body>
+</html>

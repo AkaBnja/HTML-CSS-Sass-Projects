@@ -1,0 +1,40 @@
+* { /* Esto es para reiniciar los bordes de las paginas web */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { /* Se hace referencia al body */
+  display: flex; /* Se hace flexible */
+  justify-content: center; /* Se justifican los objetos de izquierda a derecha */
+  align-items: center; /* Se alinean de arriba hacia abajo */
+  height: 100vh; /* Se le indica que tiene una altura del 100% de la pantalla */
+  background-image: linear-gradient(to bottom right, #201c13, #3d321c, #3f2c0c); /* Se le da un color */
+}
+
+.player { /* Se hace referencia a ".player" */
+  border-radius: 15px; /* Se redondean los bordes */
+  overflow: hidden; /* Se indica que todo lo que sobre se elimine */
+  position: relative; /* Se le da una posicion relativa para que tome referencia su propio punto */
+  width: 350px; /* Se le asigna un ancho */
+  background-color: #F1F3F4; /* Se le indica el color */
+  box-shadow: 0px 0px 40px white; /* Se le hace una sombra */
+}
+.player .img-box { /* Se hace referencia a ".img-box" que se encuentra dentro de ".player" */
+  position: relative; /* Se le da una posicion relativa para que tome referencia su propio punto */
+  width: 100%; /* Se le da un ancho del 100% */
+  height: 350px; /* Se le da una altura de 350px */
+}
+.player .img-box img { /* Se hace referencia a la img que se encuentra dentro de ".img-box" */
+  position: absolute; /* Se le da una posicion absoluta para que tome como referencia su clase "padre" */
+  top: 0; /* Se le apega a top al maximo */
+  left: 0; /* Se le apega a left al maximo */
+  height: 100%; /* Se le da una altura del 100% */
+  width: 100%; /* Se le un ancho del 100% */
+  -o-object-fit: cover;
+     object-fit: cover; /* Se le indica que cubra el .player */
+}
+.player audio { /* Se hace referencia al audio que se encuentra dentro de ".player" */
+  width: 100%; /* Se le da un alto del 100% */
+  outline: none; /* Se elimina el borde */
+}/*# sourceMappingURL=style.css.map */

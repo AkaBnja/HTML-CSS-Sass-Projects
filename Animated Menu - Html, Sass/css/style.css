@@ -1,0 +1,92 @@
+@charset "UTF-8";
+* { /* Se reinician los bordes de la pagina */
+  margin: 0; /* Se elimina el margen exterior */
+  padding: 0; /* Se elimina el margen interior */
+  box-sizing: border-box; /* Se ajusta el box sizing */
+  font-family: sans-serif; /* Se le indica una fuente de letras */
+}
+
+body {
+  display: flex; /* Se hace flexible */
+  justify-content: center; /* Se justifican los objetos de izquierda a derecha */
+  height: 100vh; /* Se le da un alto del 100% */
+  align-items: center; /* Se alinean los objetos de arriba hacia abajo */
+}
+body ul {
+  position: relative; /* Se le da una posicion relativa para que tome como referencia su propio punto */
+  display: flex;
+  gap: 30px;
+}
+body ul li {
+  position: relative; /* Se le da una posicion relativa para que tome como referencia su propio punto */
+  list-style: none; /* Se le quita el punto que se le agregan por defecto a las listas */
+  width: 70px; /* Se le da un ancho */
+  height: 70px; /* Se le da un ancho */
+  background: white; /* Se le da un color */
+  border-radius: 60px; /* Los bordes se redondean */
+  cursor: pointer; /* Se coloca la manita de click */
+  display: flex; /* Se hace flexible para mejor responsive, y ademas para alinear los objetos de manera mas comoda */
+  justify-content: center; /* Se justifican los objetos de izquierda a derecha */
+  align-items: center; /* Se alinean los objetos de arriba a abajo */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Se indica una sombra */ /* La sombra se indica de izquierda a derecha, luego de arriba hacia abajo y finalmente se indica el difuminado y el color */
+  transition: 0.5s; /* Se le ordena que el tiempo de las transiciones sera de 0.5s */
+}
+body ul li:hover {
+  width: 160px; /* Se le indica que con el hover el tamaño crecera */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Se le indica que con el hover la sombra tendra un efecto */
+}
+body ul li:hover::before { /* Before es una herramienta dentro de hover que se usa para indicar el antes del objeto */
+  opacity: 1; /* Esto es para que cuando se utilice el hover se vea el color */
+}
+body ul li:hover::after { /* After es una herramienta dentro de hover que se usa para indicar el despues del objeto */
+  opacity: 0.5; /* Esto se hace para que la opacidad disminuya de forma gradual */
+}
+body ul li:hover ion-icon { /* Se invocan los iconos de ion-icon */
+  transform: scale(0); /* Se reduce su escala */
+  color: #fff; /* Se le da un color */
+  transition-delay: 0.25s; /* Se le agrega un pequeño delay a la transicion */
+}
+body ul li:hover .title {
+  transform: scale(1);
+  transition-delay: 0.4s;
+}
+body ul li::before { /* Se indica un before para "li" */
+  content: ""; /* Se le agrega contenido */ /* En este caso el contenido es nada */
+  position: absolute; /* Se le indica que siga la posicion de su clase padre */
+  inset: 0; /* inset es una manera de centrar los objetos */
+  border-radius: 60px; /* Los bordes se redondean */
+  background: linear-gradient(to right bottom, var(--i), var(--j)); /* Se les asigna el color */
+  opacity: 0; /* Se le da una opacidad de 0 para que el color este oculto antes de que se use el hover */
+  transition: 0.5s; /* Se le ordena que el tiempo de las transiciones sera de 0.5s */
+}
+body ul li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  background: linear-gradient(to right bottom, var(--i), var(--j));
+  transition: 0.5s;
+  filter: blur(15px);
+  z-index: -1; /* Se le indica la capa donde esta */
+  opacity: 0;
+}
+body ul li ion-icon {
+  color: #464646;
+  font-size: 22px;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+body ul li span {
+  position: absolute;
+}
+body ul li .title {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+}/*# sourceMappingURL=style.css.map */

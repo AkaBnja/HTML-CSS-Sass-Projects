@@ -1,0 +1,78 @@
+:root {
+    --color1: #6e266b;
+}
+
+html {
+    box-sizing: border-box; /* Esto lo que hace es que cada medida colocada sea la real */
+    font-size: 62,5%; /* Esto lo que hace es que la medida rem pase de ser 16px a ser 10px */
+}
+*, *:before, *:after { /* Y con esto se eliminan los bordes por defecto de html */
+    box-sizing: inherit;
+}
+
+body { /* Se indica el body */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Se le asigna la tipografia a el body */
+    background-image: linear-gradient(to right bottom, #2b1124, #6e266b, #882577); /* Se le asigna el color al body */
+}
+
+.container { /* Se indica la clase de container */
+    display: flex; /* Se le indica que ".container" es flexible */
+    justify-content: center; /* Se justifica los objetos que se encuentren dentro de container */ /* RECORDAR QUE justify-content ES PARA ACOMODAR LOS OBJETOS DE IZQUIERDA A DERECHA */
+    align-items: center; /* Se alinean los objetos que se encuentren dentro de container */ /* RECORDAR QUE align-items ES PARA ACOMODAR LOS OBJETOS DE ARRIBA A ABAJO */
+    height: 100vh; /* Se indica que ".container" podra usar el 100% de la pagina */
+}
+
+.card { /* Se indica la clase card */
+    background-color: white; /* Se le indica el color */
+    /* No le agrego height porque asi el largo variara dependiendo del contenido */
+    width: 350px; /* Se indica el ancho a ".card" */
+    border-radius: 10px; /* Se redondean los bordes */
+    overflow: hidden; /* overflow se refiere a todos los objetos que se desbordan, con hidden lo que se hace es que lo que se desborda se esconde */
+    box-shadow: 2px 2px 40px rgb(0, 0, 0); /* Se añade una sombra a ".card" */
+    &-header { /* Se ingresa a la clase de ".card-header" dentro de ".card" */
+        width: 100%; /* Se le indica que el ancho es del 100% */
+        display: block; /* Se indica un display block */ /* Dentro de ".card-header" hay solamente un elemento, por lo que para evitar inconvenientes se le coloca display block */
+    }
+    &-body { /* Se ingresa a la clase de ".card-body" dentro de ".card" */
+        background-color: white; /* Agregamos un color para diferenciar la seccion que se esta afectando */
+        display: flex; /* Se le indica que ".card-body" es flexible */
+        flex-direction: column; /* Se le indica la direccion a flex, en este caso de izquierda a derecha */
+        align-items: center;
+        border-bottom: 5px solid var(--color1);
+        text-align: center;
+        &-contentimg {
+            border: 8px solid #6e266b;
+            border-radius: 50%;
+            background-color: #893999;
+            box-shadow: 0px -8px 20px #6e266b;
+            height: 110px;
+            width: 110px;
+            margin-top: calc(-50px - 8px);
+            &-img {
+                margin-left: 10px;
+            }
+        }
+        &-tittle {
+            margin-top: 1rem;
+            font-size: 2rem;
+            span {
+                color: var(--color1);
+            }
+        }
+        &-description {
+            margin-top: -10px;
+        }
+    }
+    &-footer {
+        display: flex;
+        justify-content: space-evenly;
+        &-content {
+            text-align: center;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            img {
+                margin-top: -10px;
+            }
+        }
+    }
+}

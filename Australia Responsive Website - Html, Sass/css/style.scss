@@ -1,0 +1,376 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; // Codigo para añadir animacion al scroll
+}
+
+body {
+    background-color: #111;
+}
+
+main {
+    position: relative;
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100; // Para colocar la posicion, si arriba o abajo de otros elementos //
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 18px;
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .toggle {
+            img {
+                width: 50px;
+                cursor: pointer;
+            }
+        }
+    }
+    .banner {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            z-index: 100;
+            background: linear-gradient(to top, #111, transparent);
+        }
+        .content {
+            position: relative;
+            z-index: 1000;
+            max-width: 900px;
+            text-align: center;
+            h2 {
+                color: white;
+                font-size: 4em;
+            }
+            p {
+                color: white;
+                font-size: 1.2em;
+            }
+        }
+    }
+    .about {
+        position: relative;
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 40px;
+        .contentBox {
+            flex-direction: column;
+            min-width: 50px;
+            width: 400px;
+            text-align: center;
+        }
+        .BoxImagen {
+            position: relative;
+            height: 480px;
+            width: 700px;
+            background: #191919;
+            transition: 0.5s;
+            overflow: hidden;
+            border-radius: 15px;
+            img {
+                border-radius: 15px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .bannerTwo {
+        position: relative;
+        width: 100%;
+        min-height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 180px;
+            z-index: 100;
+            background: linear-gradient(to top, #111, transparent);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 180px;
+            z-index: 100;
+            background: linear-gradient(to bottom, #111, transparent);
+        }
+    }
+    .destination {
+        text-align: center;
+        min-height: 90vh;
+        padding-bottom: 20px;
+        padding-top: 100px;
+        align-items: center;
+        .content {
+            text-align: center;
+        }
+        .destinationList {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            &:hover {
+                .box {
+                    opacity: 0.3;
+                }
+            }
+            .box {
+                position: relative;
+                height: 480px;
+                min-width: 350px;
+                width: 350px;
+                background: #191919;
+                transition: 0.5s;
+                margin: 10px;
+                overflow: hidden;
+                border-radius: 15px;
+                &:hover {
+                    opacity: 1;
+                }
+                .content {
+                    width: 100%;
+                    height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h3 {
+                        color: white;
+                        font-weight: 500;
+                        line-height: 1.2em;
+                        span {
+                            font-size: 0.8em;
+                            font-weight: 300;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bannerThree {
+        position: relative;
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            z-index: 100;
+            background: linear-gradient(to top, #111, transparent);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            z-index: 100;
+            background: linear-gradient(to bottom, #111, transparent);
+        }
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .sci {
+            position: relative;
+            display: flex;
+            margin-top: 10px;
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    margin: 0px 20px;
+                    ion-icon {
+                        color: white;
+                        font-size: 40px
+                    }
+                }
+            }
+        }
+        .copyright {
+            margin-bottom: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            color: #666;
+            text-align: center;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+a.btn { // Esto es para hacer que los botones sean todos iguales //
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background: white;
+    color: #333;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+}
+
+.titleText {
+    font-weight: 700;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text {
+    color: white;
+    font-size: 1em;
+}
+
+.imgBox {
+    position: relative;
+    min-height: 400px;
+    img {
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.fitBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+@media (max-width: 1119px) {
+    .destination {
+        min-height: 1420px;
+    }
+}
+
+@media (max-width: 780px) {
+    section {
+        padding: 40px;
+    }
+    .banner {
+        h2 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size:  1em;
+        }
+    }
+    .about {
+        display: flex;
+        min-height: 1000px;
+        .contentBox {
+            min-width: 100%;
+            width: 100%;
+            text-align: center;
+            padding-left: 10px;
+        }
+        .BoxImagen {
+            margin-top: -150px;
+        }
+    }
+    .imgBox {
+        min-height: 400px;
+    }
+    a.btn {
+        margin-bottom: 30px;
+    }
+    .destination {
+        min-height: 2100px;
+        .destinationList {
+            .box {
+                position: relative;
+                max-width: 350px;
+                width: 100%;
+                height: 400px;
+                min-width: initial;
+                .imgBox {
+                    height: 320px;
+                }
+            }
+        }
+    }
+    .footer {
+        .sci {
+            li {
+                a {
+                    ion-icon {
+                        color: white;
+                        max-width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #111;
+}
+::-webkit-scrollbar-thumb {
+    background: #272727;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #2c2c2c;
+}

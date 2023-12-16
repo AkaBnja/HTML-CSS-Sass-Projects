@@ -1,0 +1,88 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('https://wallpapercrafter.com/sizes/3840x2160/289587-london-england-great-britain-building-hdr.jpg');
+    background-size: cover;
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -5;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 2.7rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: -15px;
+    padding: 0 30px;
+}
+
+h1, p {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+}
+
+label, h2 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    width: 520px;
+    height: auto;
+    padding: 20px 35px;
+    border-radius: 90px;
+    border: none;
+}
+
+form #name-label, #email-label, #number-label, h2, #textarea-label {
+    font-size: 1.5rem;
+}
+
+form #name-label, #email-label, #number-label {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form #name, #email, #number, #dropdown, #textarea {
+    border-radius: 12px;
+    padding: 10px;
+    border: none;
+}
+
+form .btn {
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: center;
+}
+
+form .btn #submit {
+    width: 100px;
+    padding: 8px;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: bolder;
+}
