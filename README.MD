@@ -1,4 +1,4 @@
-# HTML-CSS-Sass-Project
+# HTML-CSS-Sass-Projects
 
 ![HtmlCssSass](https://cdn.eduonix.com/assets/images/header_img/2021081711405813189.png)
 
